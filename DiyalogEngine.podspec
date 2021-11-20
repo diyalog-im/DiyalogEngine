@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DiyalogEngine'
-  s.version          = '4.7.5'
+  s.version          = '4.7.6'
   s.summary          = 'DiyalogEngine iOS SDK for intergration DiyalogEngine Messaging to your apps.'
 
   s.homepage         = 'https://github.com/diyalog-im/DiyalogEngine'
@@ -21,17 +21,18 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
 
   s.prepare_command = <<-CMD
-      echo 'fetching DiyalogEngine.framework'
-      curl -OL 'https://diyalog.im/app/pkgs/ios_frameworks/DiyalogEngine/4.7.5/DiyalogEngine.zip'
+      echo 'fetching DiyalogEngine.xcframework'
+      curl -OL 'https://diyalog.im/app/pkgs/ios_frameworks/DiyalogEngine/4.7.6/DiyalogEngine.zip'
       rm -fr 'DiyalogEngine.framework'
-      echo 'unzipping DiyalogEngine.framework'
+      rm -fr 'DiyalogEngine.xcframework'
+      echo 'unzipping DiyalogEngine.xcframework'
       unzip -o -q DiyalogEngine.zip
       echo 'cleaning files'
       rm DiyalogEngine.zip
     CMD
 
   s.preserve_paths = 'DiyalogEngine'
-  s.vendored_frameworks =  'DiyalogEngine.framework'
+  s.vendored_frameworks =  'DiyalogEngine.xcframework'
   
   s.xcconfig = {
      "SWIFT_INCLUDE_PATHS" => "${PODS_ROOT}/DiyalogEngine",

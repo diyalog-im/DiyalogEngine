@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DiyalogEngine'
-  s.version          = '4.12.0'
+  s.version          = '5.0.0'
   s.summary          = 'DiyalogEngine iOS SDK for intergration DiyalogEngine Messaging to your apps.'
 
   s.homepage         = 'https://github.com/diyalog-im/DiyalogEngine'
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.prepare_command = <<-CMD
       echo 'fetching DiyalogEngine.xcframework'
-      curl -OL 'https://diyalog.im/releases/DiyalogEngine/4.12.0/DiyalogEngine.zip'
+      curl -OL 'https://diyalog.im/releases/DiyalogEngine/5.0.0/DiyalogEngine.zip'
       rm -fr 'DiyalogEngine.framework'
       rm -fr 'DiyalogEngine.xcframework'
       echo 'unzipping DiyalogEngine.xcframework'
